@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Forgery Detection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("/static/frogery.png");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 400px;
+            padding: 40px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        .logo {
+            font-size: 48px;
+            color: #007bff;
+            margin-bottom: 20px;
+            animation: logo-rotate 2s linear infinite;
+        }
+        @keyframes logo-rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin: 20px 0;
+        }
+        .file-input {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .file-input input[type="file"] {
+            display: none;
+        }
+        .file-input label {
+            display: block;
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button {
+            background-color: #28a745;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #dc3545;
+            color: #ffffff;
+            display: none;
+        }
+        .result.success {
+            background-color: #28a745;
+        }
+        .result.error {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <i class="fas fa-pencil-alt logo"></i> Signature Forgery Detection
+        </h1>
+        <form name="form" id="form" action="/" method="POST" enctype="multipart/form-data">
+            <div class="file-input">
+                <input type="file" name="original" id="original" accept=".png, .jpg" required>
+                <label for="original"><i class="fas fa-image"></i> Original Image</label>
+            </div>
+            <div class="file-input">
+                <input type="file" name="fake" id="fake" accept=".png, .jpg" required>
+                <label for="fake"><i class="fas fa-image"></i> Supposed Fake Image</label>
+            </div>
+            <button type="submit">Identify Forgery</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+    
+    <script>
+        document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            var formData = new FormData(this);
+
+            fetch('/', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                var resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = data;
+                resultDiv.style.display = 'block';
+                resultDiv.classList.remove('success', 'error');
+                if (data.includes('Forged')) {
+                    resultDiv.classList.add('error');
+                } else {
+                    resultDiv.classList.add('success');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                var resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = 'An error occurred. Please try again.';
+                resultDiv.style.display = 'block';
+                resultDiv.classList.remove('success');
+                resultDiv.classList.add('error');
+            });
+        });
+    </script>
+</body>
+</html>
