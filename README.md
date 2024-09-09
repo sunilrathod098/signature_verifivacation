@@ -56,14 +56,14 @@ pip install pillow
 Signature_Verification_Frogery_Detection
 
 = │
-- ├── app.py                 # Main application script
-- ├── model.py               # Model definition
-- ├── utils.py               # Utility functions for image processing- 
-- ├── train.py               # Script for training the model (if applicable)
-- ├── static/                # Static assets (CSS, JS, images)
-- ├── templates/             # HTML templates for Flask
-- ├── sign_data/             # Folder containing signature images (optional)
-- └── model.pt               # Pre-trained model file
+- ├── app.py                     # Main application script
+- ├── model.py                   # Model definition
+- ├── utils.py                   # Utility functions for image processing- 
+- ├── train.py                   # Script for training the model (if applicable)
+- ├── static/                    # Static assets (CSS, JS, images)
+- ├── templates/                 # HTML templates for Flask
+- ├── sign_data/                 # Folder containing signature images (optional)
+- └── model.pt                   # Pre-trained model file
 
 ## Example
 
@@ -84,6 +84,6 @@ Signature_Verification_Frogery_Detection
 ## Instructions:
 
 - Replace the placeholder GitHub URL (`https://github.com/sunilrathod098/signature_verification.git`).
-- Add a screenshot of the web interface in the `static/frogery.png` file as referenced in the `README.md`.
+- Add a screenshot of the web background interface in the `static/frogery.png` file as referenced in the `README.md`.
 
 
