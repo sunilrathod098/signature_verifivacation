@@ -53,16 +53,17 @@ pip install pillow
 
 ## Folder Structure
 
-Signature_Verification_Frogery_Detection/
-│
-├── app.py                 # Main application script
-├── model.py               # Model definition
-├── utils.py               # Utility functions for image processing
-├── train.py               # Script for training the model (if applicable)
-├── static/                # Static assets (CSS, JS, images)
-├── templates/             # HTML templates for Flask
-├── sign_data/             # Folder containing signature images (optional)
-└── model.pt               # Pre-trained model file
+Signature_Verification_Frogery_Detection
+
+= │
+- ├── app.py                 # Main application script
+- ├── model.py               # Model definition
+- ├── utils.py               # Utility functions for image processing- 
+- ├── train.py               # Script for training the model (if applicable)
+- ├── static/                # Static assets (CSS, JS, images)
+- ├── templates/             # HTML templates for Flask
+- ├── sign_data/             # Folder containing signature images (optional)
+- └── model.pt               # Pre-trained model file
 
 ## Example
 
