@@ -1,6 +1,6 @@
 # Signature Forgery Detection in Python
 
-**Author-@sunilrathod098** (Danavath SUnil Rathod)
+**Author-@sunilrathod098** (Danavath Sunil Rathod)
 
 - This project is a **Signature Forgery Detection** system built using **Flask**, **PyTorch**, and **PIL** (Python Imaging Library). 
 - The system allows users to upload an original signature image and a potentially forged signature image, and then determines whether the two images are identical or if the second image is forged.
