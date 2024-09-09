@@ -1,6 +1,6 @@
 # Signature Forgery Detection in Python
 
-**Author-@sunilrathod098**
+**Author-@sunilrathod098** (Danavath SUnil Rathod)
 
 - This project is a **Signature Forgery Detection** system built using **Flask**, **PyTorch**, and **PIL** (Python Imaging Library). 
 - The system allows users to upload an original signature image and a potentially forged signature image, and then determines whether the two images are identical or if the second image is forged.
@@ -41,7 +41,7 @@ pip install pillow
 ## Running the Application
 
 - Clone the Repository:
-- git clone https://github.com/your-username/signature-forgery-detection.git
+- git clone https://github.com/sunilrathod098/signature_verification.git
 
 - Navigate to the project directory:
 - **cd signature-forgery-detection**
@@ -53,7 +53,7 @@ pip install pillow
 
 ## Folder Structure
 
-signature-forgery-detection/
+Signature_Verification_Frogery_Detection/
 │
 ├── app.py                 # Main application script
 ├── model.py               # Model definition
@@ -82,7 +82,7 @@ signature-forgery-detection/
 
 ## Instructions:
 
-- Replace the placeholder GitHub URL (`https://github.com/sunilrathod098/signature-verification.git`).
+- Replace the placeholder GitHub URL (`https://github.com/sunilrathod098/signature_verification.git`).
 - Add a screenshot of the web interface in the `static/frogery.png` file as referenced in the `README.md`.
 
 
