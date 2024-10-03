@@ -1,4 +1,4 @@
-# Signature Forgery Detection in Python
+# Signature Forgery Detection
 
 **Author-@sunilrathod098** (Danavath Sunil Rathod)
 
@@ -51,11 +51,11 @@ pip install pillow
 
 - Open a browser and navigate to **http://127.0.0.1:5000** to use the Signature Forgery Detection interface.
 
-## Folder Structure
+## Project Structure
 
-Signature_Verification_Frogery_Detection
 
-= │
+= │Signature_Verification_Frogery_Detection
+- |
 - ├── app.py                     # Main application script
 - ├── model.py                   # Model definition
 - ├── utils.py                   # Utility functions for image processing- 
@@ -64,7 +64,8 @@ Signature_Verification_Frogery_Detection
 - ├── templates/                 # HTML templates for Flask
 - ├── sign_data/                 # Folder containing signature images (optional)
 - └── model.pt                   # Pre-trained model file
-
+- └── Readme.md
+- └──Documentation_Project.md
 ## Example
 
 - Upload two signature images.
@@ -74,6 +75,13 @@ Signature_Verification_Frogery_Detection
 
 ## Model Details
 - The model is a neural network built using PyTorch, which has been trained on a dataset of signatures to recognize forgeries. The output is a softmax probability indicating the likelihood of forgery.
+
+##Future Implementations
+
+- *Real-time detection* using webcam input.
+- *User authentication* for storing past verification results.
+- *Mobile app* for signature detection on the go.
+- *API development* for integration into external systems.
 
 ## Contributions
 - Feel free to open issues or submit pull requests for improvements or bug fixes.
