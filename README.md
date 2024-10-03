@@ -63,8 +63,8 @@ pip install pillow
 - ├── static/                    # Static assets (CSS, JS, images)
 - ├── templates/                 # HTML templates for Flask
 - ├── sign_data/                 # Folder containing signature images (optional)
-- └── model.pt                   # Pre-trained model file
-- └── Readme.md
+- ├── model.pt                   # Pre-trained model file
+- ├── Readme.md
 - └──Documentation_Project.md
 ## Example
 
