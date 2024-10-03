@@ -76,7 +76,7 @@ pip install pillow
 ## Model Details
 - The model is a neural network built using PyTorch, which has been trained on a dataset of signatures to recognize forgeries. The output is a softmax probability indicating the likelihood of forgery.
 
-##Future Implementations
+## Future Implementations
 
 - *Real-time detection* using webcam input.
 - *User authentication* for storing past verification results.
