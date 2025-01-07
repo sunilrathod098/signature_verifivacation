@@ -91,7 +91,7 @@ pip install pillow
 
 ## Instructions:
 
-- Replace the placeholder GitHub URL (`https://github.com/sunilrathod098/signature_verification.git`).
-- Add a screenshot of the web background interface in the `static/frogery.png` file as referenced in the `README.md`.
+- GitHub URL (`https://github.com/sunilrathod098/signature_verification.git`).
+-The web background interface in the `static/frogery.png` file as referenced in the `README.md`.
 
 
