@@ -115,17 +115,16 @@
     
     <script>
         document.getElementById('form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
+            event.preventDefault();
 
             var formData = new FormData(this);
-
             fetch('/', {
                 method: 'POST',
                 body: formData
             })
             .then(response => response.text())
             .then(data => {
-                var resultDiv = document.getElementById('result');
+                const resultDiv = document.getElementById('result');
                 resultDiv.innerHTML = data;
                 resultDiv.style.display = 'block';
                 resultDiv.classList.remove('success', 'error');
@@ -137,7 +136,7 @@
             })
             .catch(error => {
                 console.error('Error:', error);
-                var resultDiv = document.getElementById('result');
+                const resultDiv = document.getElementById('result');
                 resultDiv.innerHTML = 'An error occurred. Please try again.';
                 resultDiv.style.display = 'block';
                 resultDiv.classList.remove('success');

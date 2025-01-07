@@ -13,7 +13,7 @@ def read_and_process_file(f):
 
     # im[im>=239.8] = 1 #239.8 is the mean of the dataset
     im_copy[im_copy!=1] = 0
-    im_copy = im_copy.astype(np.float32) 
+    im_copy = im_copy.astype(np.float32)
     
 
     return im_copy
